@@ -51,9 +51,8 @@ categories: github pages
 *****
 
 #### 参考博客
-
-	https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
-	http://www.ezlippi.com/blog/2015/03/github-pages-blog.html
+- [setting-up-your-github-pages-site-locally-with-jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+- [github-pages-blog](http://www.ezlippi.com/blog/2015/03/github-pages-blog.html)
 
 ***
 
