@@ -5,11 +5,14 @@ date:   2016-11-13 16:03:59
 categories: github pages
 ---
 
-## github pages 搭建
 
-### 首要步骤：根据官网一步步搭建
+### 主要参考：根据官网一步步搭建
 
 [setting-up-your-github-pages-site-locally-with-jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)	
+
+***
+
+### 如果是第一次搭建jekyll，需要安装下面的软件和配置
 
 #### 安装 RubyInstaller for Windows
 
