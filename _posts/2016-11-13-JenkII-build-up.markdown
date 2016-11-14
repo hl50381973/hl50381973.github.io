@@ -32,13 +32,18 @@ categories: github pages
 - gem sources --remove https://rubygems.org/  
 - gem sources -a http://gems.ruby-china.org/--（注意这里是http协议，网上给的https协议，会有认证失败错误）
 
+#### Install Bundler
+- gem install bundler --这个是gem的包依赖管理器
+
 #### 配置Gemfile
+- 在你的工程<xxx>.github.io平级目录下，创建一个文件Gemfile
 - source 'http://gems.ruby-china.org/'
 - gem 'github-pages', group: :jekyll_plugins
 - bundle install
 
-#### Install Bundler
-- gem install bundler--根据gemfile的配置，下载所需要的依赖包
+#### bundle install 
+- bundle install --根据gemfile的配置，下载所需要的依赖包
+
 
 *****
 
