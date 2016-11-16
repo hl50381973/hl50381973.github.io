@@ -47,7 +47,7 @@ categories: docker
 ### 参考installtion centos
 https://docs.docker.com/engine/installation/linux/centos/	
 	
-```	
+
 	Install with the script
 		
 	1.Log into your machine as a user with sudo or root privileges.
@@ -57,7 +57,7 @@ https://docs.docker.com/engine/installation/linux/centos/
 	3. Run the Docker installation script.
 	 	（使用daocloud脚本）curl -sSL https://get.daocloud.io/docker | sudo sh
 		(不建议使用官网的脚本，因为国内网络)$ curl -fsSL https://get.docker.com/ | sudo sh
-```		
+	
 	
 ### 配置加速器
 	https://www.daocloud.io/mirror#accelerator-doc
