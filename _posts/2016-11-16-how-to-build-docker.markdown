@@ -8,9 +8,10 @@ categories: docker
 # 一步步搭建docker（虚拟机中的Ubuntu环境下）
 
 #### 下载virtualbox
-(下载virtualbox)如果windows上装了docker，那么会带有virtualbox
+如果windows上装了docker，那么会带有virtualbox
+
 #### 下载Ubuntu镜像
-(下载Ubuntu)[http://www.ubuntu.org.cn/download/alternative-downloads] 点击Ubuntu 14.04.4 Desktop (64-bit) 
+[下载Ubuntu](http://www.ubuntu.org.cn/download/alternative-downloads) 点击Ubuntu 14.04.4 Desktop (64-bit) 
 
 ### 安装ubuntu
 打开virtualbox-->
@@ -51,7 +52,8 @@ https://docs.docker.com/engine/installation/linux/centos/
 		
 	1.Log into your machine as a user with sudo or root privileges.
 	2. Make sure your existing packages are up-to-date.
-		$ sudo yum update / sudo apt-get update
+		(centos)$ sudo yum update 
+		(ubuntu)$ sudo apt-get update
 	3. Run the Docker installation script.
 	 	（使用daocloud脚本）curl -sSL https://get.daocloud.io/docker | sudo sh
 		(不建议使用官网的脚本，因为国内网络)$ curl -fsSL https://get.docker.com/ | sudo sh
