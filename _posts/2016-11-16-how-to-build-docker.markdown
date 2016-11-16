@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "docker搭建l!"
+date:   2016-11-13 16:03:59
+categories: docker
+---
+
 # 一步步搭建docker（虚拟机中的Ubuntu环境下）
 
 #### 下载virtualbox
