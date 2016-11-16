@@ -47,6 +47,10 @@ categories: github pages
 #### bundle install 
 - bundle install --根据gemfile的配置，下载所需要的依赖包
 
+#### Build your local Jekyll site
+- Navigate into the root directory of your local Jekyll site repository.
+- bundle exec jekyll serve
+- Preview your local Jekyll site in your web browser at http://localhost:4000
 
 *****
 
