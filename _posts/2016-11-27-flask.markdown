@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "flask 快速入门 "
+date:   2016-11-27 07:47:00
+categories: flask
+---
+
+# Flask 快速搭建
+
+- 下载python2.7 --> https://www.python.org/downloads/
+	- python --version 确认当前版本
+- 安装时后，选择添加path路径或者手动添加path路径
+	- 手动添加path路径
+	- 变量名PYTHON_HOME，变量值C:\Python27
+	- 把下面添加到PATH路径，用；分割: %PYTHON_HOME%;%PYTHON_HOME%\Scripts;%PYTHON_HOME%\Lib\site-packages;
+- 使用pip
+	- 使用豆瓣pip源头安装virtualenv-- pip install virtualenv -i http://pypi.douban.com/simple --trusted-host pypi.douban.com	
+- 创建virtualenv虚拟环境，来隔离资源
+	- where python -- 查看当前使用了哪个python
+	- 打开cmd，在c盘创建目录venv,然后cd venv  
+	- virtualenv venv -- 创建virtualen
+	- venv/Scripts/activate.bat -- 激活,可以使用venv/Scripts/deactivate.bat来取消
+	- where python -- 查看当前使用了哪个python
+		
+- 使用豆瓣pip源头安装flask-- pip install flask -i http://pypi.douban.com/simple --trusted-host pypi.douban.com	
+- 创建workspace目录
+	- 创建E:\workspace
+- cd E:\workspace	
+- 把当前的pip依赖导出到文件requirement.txt	
+	- python freeze > requirement.txt	
+- flask sample
+		- https://github.com/hl50381973/flask-sample
+	
+## IDE	
+- 下载pycharm付费版本 --> http://www.jetbrains.com/pycharm/
+
+
+
+## pip依赖管理
+- pip install virtualenv -i http://pypi.douban.com/simple --trusted-host pypi.douban.com -- pip源 
+- pip freeze > requirement.txt -- 导出pip依赖
+- pip install -r requirement.txt -- 根据pip依赖安装
