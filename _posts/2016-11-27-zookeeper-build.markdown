@@ -56,3 +56,43 @@ zookeeper 搭建
 - 进入客户端
 	随便挑选一台节点，zkCli.sh
 - ls / 	查看zooker上的znode
+
+---
+
+
+zookeeper 单节点 搭建
+1.修改操作系统的/etc/hosts文件添加：
+	192.168.3.71 edu-provider-01
+2.到http://apache.fayea.com/zookeeper/下载zookeeper-3.4.6:
+	wget http://apache.fayea.com/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz
+3.解压zookeeper安装包
+	tar -zxvf zookeeper-3.4.6.tar.gz
+4.在/home/wu/sc/zookeeper-3.4.6目录下创建以下目录:
+	mkdir data
+	mkdir logs
+5.将zookeeper-3.4.6/conf目录下的zoo_sample.cfg文件拷贝一份，命名为zoo.cfg文件拷贝一份，命名为zoo.cfg
+	cp zoo_sample.cfg zoo.cfg
+6.修改zoo.cfg配置文件
+	vi zoo.cfg
+	
+	tickTime=2000
+	initLimit=10
+	syncLimit=5
+	dataDir=/home/wusc/zookeeper-3.4.6/data
+	dataLogDir=/home/wusc/zookeeper-3.4.6/logs
+	clientPort=2181
+	server.1=edu-provider-01:2888:3888
+	
+7 在dataDir=/home/wusc/zookeeper-3.4.6/data下创建myid文件
+	编辑myid文件，并在对应的ip的机器上输入对应的编号。如在zookeeper上，myid文件内容就是1。
+	如果只在单点上惊醒安装配置，那么只有一个server.1
+8.wusc用户下修改vi /home/wusc/.bash_profile，增加zookeeper配置：
+	export ZOOKEEPER_HOME=/home/wusc/zookeeper-3.4.6
+	export PATH=.:$ZOOKEEPER_HOME/bin:$PATH
+	使配置文件生效
+	source .bash_profile
+9 启动并测试zookeeper
+	(1)zkServer.sh start
+	(2)jps
+	(3)zkServer.sh status
+	
