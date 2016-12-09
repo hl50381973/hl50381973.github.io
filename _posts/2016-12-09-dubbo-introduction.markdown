@@ -23,3 +23,6 @@ categories: dubbo
 
 -------------------------------------------------------
 - dubbo用户指南: http://dubbo.io/
+ 
+### dubbox 学习
+- 参考文章：http://dangdangdotcom.github.io/dubbox/
