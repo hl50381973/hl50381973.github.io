@@ -68,3 +68,10 @@ node -v
 npm -v	
 	
 	
+	
+--------------------------
+
+参考：
+http://blog.csdn.net/qq_29262849/article/details/52973095
+	
+	
