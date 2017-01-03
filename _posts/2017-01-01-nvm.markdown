@@ -4,9 +4,9 @@ title:  " nvm windows搭建 "
 date:   2016-12-13 16:05:00
 categories: nvm 
 ---
-## 为什么使用nvm windows
+## 为什么使用nvm-windows
 单单从node官网上下载node执行环境，不方便切换，
-node执行环境变化特别快，为了方便切换node环境，在windows环境下使用nvm windows 是明智的选择
+node执行环境变化特别快，为了方便切换node环境，在windows环境下使用nvm-windows是明智的选择
 
 
 
@@ -14,47 +14,49 @@ node执行环境变化特别快，为了方便切换node环境，在windows环�
 https://github.com/coreybutler/nvm-windows/releases
 nvm有安装版本，和非安装版本，此post是对非安装版本安装流程的说明
 
+## 步骤：
 - 解压,把nvm-noinstall 重命名为nvm
-
 - 创建 c:\dev,把文件夹移动到此目录中，变成c:\dev\nvm
-
 - 点击C:\dev\nvm\install.cmd，一路回车，生成 settings.txt
+<pre><code>
+	root: C:\dev\nvm
+	path: C:\dev\nodejs 
+	arch: 64 
+	proxy: none
+	node_mirror: https://npm.taobao.org/mirrors/node/
+	npm_mirror: https://npm.taobao.org/mirrors/npm/
+</code></pre>
 
-root: C:\dev\nvm
-path: C:\dev\nodejs 
-arch: 64 
-proxy: none
-node_mirror: https://npm.taobao.org/mirrors/node/
-npm_mirror: https://npm.taobao.org/mirrors/npm/
-
-
-# 说明： 
-  + `root 配置为当前 nvm.exe 所在目录`
-  + `path 配置为 node 快捷方式所在的目录` 
-  + `arch 配置为当前操作系统的位数（32/64）`
-  + `proxy 不用配置
-  +  node install 时候 使用淘宝镜像下载 
-  +
-
-# 配置环境变量，右击我的电脑，高级系统设置，环境变量，或者可以通过 window+r  : sysdm.cpl
-
-NVM_HOME  
-C:\dev\nvm 
-NVM_SYMLINK
-C:\dev\nodejs 
-NPM_HOME
-%NVM_HOME%\npm
-PATH += %NVM_HOME%;%NVM_SYMLINK%;  
+	-说明： 
+	  + `root 配置为当前 nvm.exe 所在目录`
+	  + `path 配置为 node 快捷方式所在的目录` 
+	  + `arch 配置为当前操作系统的位数（32/64）`
+	  + `proxy 不用配置
+	  +  node install 时候 使用淘宝镜像下载 
 
 
-  
+## 配置环境变量
+- 右击我的电脑，高级系统设置，环境变量，或者可以通过 window+r  : sysdm.cpl
+<pre><code>
+	NVM_HOME  
+	C:\dev\nvm 
+	NVM_SYMLINK
+	C:\dev\nodejs 
+	NPM_HOME
+	%NVM_HOME%\npm
+	PATH += %NVM_HOME%;%NVM_SYMLINK%;  
+</code></pre>
+
+<pre><code>
 说明
   + `NVM_HOME = 当前 nvm.exe 所在目录`
   + `NVM_SYMLINK = node 快捷方式所在的目录`
   + `PATH += %NVM_HOME%;%NVM_SYMLINK%;`
   + 打开CMD通过`set [name]`命令查看环境变量是否配置成功，set NVM_HOME，set NPM_HOME, set PATH
   + PowerShell中是通过`dir env:[name]`命令
-  
+</code></pre> 
+---
+## 常用指令  
 安装nodejs 指定版本
 	nvm install 4.3.1
 	nvm install 5.7.0
